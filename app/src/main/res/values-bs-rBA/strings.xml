@@ -3,4 +3,12 @@
     <string name="app_name">Android Labs</string>
     <string name="hello_message">Zdravo Svijete!</string>
     <string name="ButtonText">Ja sam dugme</string>
+    <string name="TextViewText">Pogledajte moj GUI</string>
+    <string name="btnText">Kliknite Ovdje</string>
+    <string name="TextArea">Upišite Ovdje</string>
+    <string name="SwitchText">Uključite / Isključite</string>
+    <string name="checkText">Vidi ovo!</string>
+    <string name="toast_message">Evo još informacija</string>
+    <string name="snackbarTextOn">Prekidač je sada uključen!</string>
+    <string name="snackbarTextOff">Prekidač je sada isključen!</string>
 </resources>
