@@ -11,4 +11,19 @@
     <string name="snackbarTextOn">The switch is now on!</string>
     <string name="snackbarTextOff">The switch is now off!</string>
 
+    <!--    Lab3-->
+    <!--    Main Login-->
+    <string name="enterEmail">Enter your email address:</string>
+    <string name="emailPlace">Type email here</string>
+    <string name="enterPass">Type your password: </string>
+    <string name="loginBTN">LOGIN</string>
+    <!--    Profile Page-->
+    <string name="profile">Your Profile</string>
+    <string name="nameText">Your Name:</string>
+    <string name="namePlace">Enter your name</string>
+    <string name="emailText">Your Email:</string>
+    <string name="picText">Your picture:</string>
+    <string name="takePic">Click the button above to take a picture</string>
+
+
 </resources>

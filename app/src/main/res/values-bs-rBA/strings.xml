@@ -11,4 +11,20 @@
     <string name="toast_message">Evo još informacija</string>
     <string name="snackbarTextOn">Prekidač je sada uključen!</string>
     <string name="snackbarTextOff">Prekidač je sada isključen!</string>
+
+<!--    Lab3-->
+    <string name="enterEmail">Unesite svoju adresu e-pošte:</string>
+    <string name="emailPlace">Upišite ovdje e-mail</string>
+    <string name="enterPass">Upišite svoju lozinku:</string>
+    <string name="loginBTN">Ulogovati se</string>
+
+    <string name="profile">Tvoj profil</string>
+    <string name="nameText">Tvoje ime:</string>
+    <string name="namePlace">Unesite svoje ime</string>
+    <string name="emailText">Vaš email:</string>
+    <string name="picText">Vaša slika:</string>
+    <string name="takePic">Kliknite gornje dugme da biste slikali</string>
+
+
+
 </resources>
