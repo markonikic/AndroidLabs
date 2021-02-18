@@ -25,5 +25,13 @@
     <string name="picText">Your picture:</string>
     <string name="takePic">Click the button above to take a picture</string>
 
+    <!--Lab 4-->
+    <!--Profile Page-->
+    <string name="chatBtn">Go to chat</string>
+    <!--Chat Page-->
+    <string name="sendBtn">Send</string>
+    <string name="recBtn">Receive</string>
+
+
 
 </resources>

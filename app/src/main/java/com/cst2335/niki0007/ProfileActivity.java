@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -39,11 +40,16 @@ public class ProfileActivity extends AppCompatActivity {
        //     }
         });
 
-
         Intent fromMain = getIntent();
             String email = fromMain.getStringExtra("EMAIL");
        EditText emailEditText = findViewById(R.id.yourEmail);
         emailEditText.setText(email);
+
+        Button chatBtn = (Button) findViewById(R.id.button4);
+        chatBtn.setOnClickListener(c->{
+            Intent gotoChat = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+            startActivity(gotoChat);
+        });
 
     }
 
@@ -58,6 +64,8 @@ public class ProfileActivity extends AppCompatActivity {
         }
         Log.e(ACTIVITY_NAME, "In Function: onActivityResult");
     }
+
+
 
     @Override
     protected void onStart(){

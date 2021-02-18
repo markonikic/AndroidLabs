@@ -25,6 +25,10 @@
     <string name="picText">Vaša slika:</string>
     <string name="takePic">Kliknite gornje dugme da biste slikali</string>
 
+    <!--Lab 4-->
+    <!--Profile Page-->
+    <string name="chatBtn">Idi na char</string>
+
 
 
 </resources>

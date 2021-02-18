@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         Button logginBtn = (Button) findViewById(R.id.button3);
         logginBtn.setOnClickListener(c->{
             Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
-
             goToProfile.putExtra("EMAIL", email.getText().toString());
             startActivity(goToProfile);
         });
