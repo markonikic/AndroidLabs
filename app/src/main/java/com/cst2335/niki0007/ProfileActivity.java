@@ -51,6 +51,13 @@ public class ProfileActivity extends AppCompatActivity {
             startActivity(gotoChat);
         });
 
+        //button5
+        Button weatherBtn = (Button) findViewById(R.id.button5);
+        weatherBtn.setOnClickListener(c->{
+            Intent gotoWeather = new Intent(ProfileActivity.this, WeatherHome.class);
+            startActivity(gotoWeather);
+        });
+
     }
 
     @Override

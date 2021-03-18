@@ -32,6 +32,7 @@
     <string name="sendBtn">Send</string>
     <string name="recBtn">Receive</string>
 
+    <string name="weather">Check The Weather</string>
 
 
 </resources>
