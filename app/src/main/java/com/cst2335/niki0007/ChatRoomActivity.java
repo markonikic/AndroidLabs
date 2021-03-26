@@ -1,9 +1,11 @@
 package com.cst2335.niki0007;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ChatRoomActivity extends AppCompatActivity {
     MyListAdapter myAdapter;
@@ -30,6 +34,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     EditText editText;
     TextView message;
     private Object MyListAdapter;
+    DetailsFragment newFragment;
 
     private SQLiteDatabase db;
 
@@ -37,6 +42,33 @@ public class ChatRoomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_room);
+        boolean tablet = findViewById(R.id.framelayout) != null;
+
+        ListView theList = (ListView) findViewById(R.id.myList);
+        ArrayAdapter<String> theAdaptor = new ArrayAdapter(this, android.R.layout.simple_list_item_1, saveChat);
+        theList.setAdapter(theAdaptor);
+        theList.setOnItemClickListener((list, item, position, id)->{
+            Bundle dataToPass = new Bundle();
+            dataToPass.putString("Message", saveChat.get(position).message);
+            dataToPass.putLong("Id", id);
+
+            if(tablet){
+                FragmentManager fm = getSupportFragmentManager();
+                if(position<2){
+                    newFragment = new DetailsFragment();
+                    fm.beginTransaction().add(R.id.framelayout, newFragment).commit();
+                }else{ //delete fragment if 3 or higher
+                    fm.beginTransaction().remove(newFragment).addToBackStack(null).commit();
+                }
+            }else{
+                //its a phone
+                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+                nextActivity.putExtras(dataToPass);
+                startActivity(nextActivity);
+            }
+
+
+        });
 
         saveChat = new ArrayList();
         sendBtn = (Button) findViewById(R.id.buttonSend);

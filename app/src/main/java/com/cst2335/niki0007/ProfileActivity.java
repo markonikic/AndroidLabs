@@ -40,6 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
        //     }
         });
 
+
         Intent fromMain = getIntent();
             String email = fromMain.getStringExtra("EMAIL");
        EditText emailEditText = findViewById(R.id.yourEmail);
@@ -57,6 +58,14 @@ public class ProfileActivity extends AppCompatActivity {
             Intent gotoWeather = new Intent(ProfileActivity.this, WeatherHome.class);
             startActivity(gotoWeather);
         });
+
+        //button7
+        Button toolbarBtn = (Button) findViewById(R.id.button7);
+        toolbarBtn.setOnClickListener(c->{
+            Intent gotoToolbar = new Intent(ProfileActivity.this, TestToolbar.class);
+            startActivity(gotoToolbar);
+        });
+
 
     }
 
