@@ -43,28 +43,28 @@ public class TestToolbar extends AppCompatActivity {
             startActivity(gotoChat);
         });
 
-        //ChatBtn
+        //WeatherBtn
         @SuppressLint("WrongViewCast")
-        ImageView chat = (ImageView) findViewById(R.id.chatBtn);
-        chatBtn.setOnClickListener(c->{
-            Intent gotoChat = new Intent(TestToolbar.this, ChatRoomActivity.class);
-            startActivity(gotoChat);
+        ImageView weatherIMG = (ImageView) findViewById(R.id.weather);
+        weatherIMG.setOnClickListener(c->{
+            Intent gotoWeatherIMG = new Intent(TestToolbar.this, WeatherHome.class);
+            startActivity(gotoWeatherIMG);
         });
 
         //ChatBtn
         @SuppressLint("WrongViewCast")
-        ImageView chatBtn = (ImageView) findViewById(R.id.chatBtn);
-        chatBtn.setOnClickListener(c->{
-            Intent gotoChat = new Intent(TestToolbar.this, ChatRoomActivity.class);
-            startActivity(gotoChat);
+        ImageView chatIMG = (ImageView) findViewById(R.id.chat);
+        chatIMG.setOnClickListener(c->{
+            Intent gotoChatIMG = new Intent(TestToolbar.this, ChatRoomActivity.class);
+            startActivity(gotoChatIMG);
         });
 
-        //ChatBtn
+        //LoginBtn
         @SuppressLint("WrongViewCast")
-        ImageView chatBtn = (ImageView) findViewById(R.id.chatBtn);
-        chatBtn.setOnClickListener(c->{
-            Intent gotoChat = new Intent(TestToolbar.this, ChatRoomActivity.class);
-            startActivity(gotoChat);
+        ImageView loginIMG = (ImageView) findViewById(R.id.login);
+        loginIMG.setOnClickListener(c->{
+            Intent gotoLoginIMG = new Intent(TestToolbar.this, ProfileActivity.class);
+            startActivity(gotoLoginIMG);
         });
 
     }
